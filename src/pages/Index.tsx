@@ -15,21 +15,25 @@ const features = [
     icon: Search,
     title: "Find Alumni",
     description: "Search by company, domain, batch year, or role to find and connect with alumni.",
+    link: "/top-alumni",
   },
   {
     icon: Calendar,
     title: "Events & Reunions",
     description: "Stay updated on upcoming alumni meetups, webinars, and campus reunions.",
+    link: "/events",
   },
   {
     icon: TrendingUp,
     title: "Industry Insights",
     description: "Discover placement trends, top recruiters, and highest packages across batches.",
+    link: "/insights",
   },
   {
     icon: Users,
     title: "Networking",
     description: "Build meaningful connections with seniors for mentorship and career guidance.",
+    link: "/networking",
   },
 ];
 
@@ -88,8 +92,9 @@ const Index = () => {
         </p>
         <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((f) => (
-            <div
+            <Link
               key={f.title}
+              to={f.link}
               className="group rounded-xl border bg-card p-6 transition-all hover:shadow-card-hover"
             >
               <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-accent/10 text-accent transition-colors group-hover:bg-accent group-hover:text-accent-foreground">
@@ -97,7 +102,7 @@ const Index = () => {
               </div>
               <h3 className="mt-4 font-display text-lg font-semibold text-foreground">{f.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{f.description}</p>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
