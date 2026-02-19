@@ -7,6 +7,9 @@ import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
 import AlumniDirectory from "./pages/AlumniDirectory";
 import Events from "./pages/Events";
+import TopAlumni from "./pages/TopAlumni";
+import IndustryInsights from "./pages/IndustryInsights";
+import Networking from "./pages/Networking";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
@@ -24,6 +27,9 @@ const App = () => (
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/alumni" element={<AlumniDirectory />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/top-alumni" element={<TopAlumni />} />
+          <Route path="/insights" element={<IndustryInsights />} />
+          <Route path="/networking" element={<Networking />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="*" element={<NotFound />} />
